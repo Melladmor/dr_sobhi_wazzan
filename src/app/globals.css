@@ -2,26 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.custombg {
+  background-color: rgba(23, 161, 255, 0.5);
+  filter: blur(200px);
+  opacity: 50%;
+}
+.vedioPlayButton {
+  background: rgba(113, 113, 113, 0.2);
+  backdrop-filter: blur(13.292633056640625px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.controls_container {
+  background: rgba(45, 45, 45, 0.65);
+  backdrop-filter: blur(3.624756336212158px);
+}
+.volume_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: rgba(45, 45, 45, 0.65);
+  backdrop-filter: blur(3.624756336212158px);
+}
+.custom_class_controls {
+  visibility: hidden;
+}
+.custom_class_video_controller:hover .custom_class_controls {
+  visibility: visible;
+}
+.modal_overlay_bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+.form_bg {
+  background: rgba(255, 255, 255, 0);
+}
+@layer components {
+  .custom_padding {
+    @apply lg:pr-[6.5rem] lg:pl-[6.5rem] md:pr-[6rem] md:pl-[6rem] sm:pr-[1rem] sm:pl-[1rem] xs:pl-[1rem] xs:pr-[1rem];
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .custom_box_padding {
+    @apply lg:px-[6.5rem]  md:px-[6rem] sm:px-[1rem] xs:px-[1rem] lg:py-[3rem] md:py-[4rem] sm:py-[3rem] xs:py-[3rem];
+  }
+  .custom_blur_bg {
+    @apply custombg;
+  }
+  .custom_glass_effect {
+    @apply relative overflow-hidden;
+  }
+  .custom_glass_effect::before {
+    content: "";
+    @apply absolute inset-0 custombg bg-opacity-30 backdrop-blur-[200px] z-0;
+  }
+  .custom_glass_content {
+    @apply relative z-0 p-6;
+  }
+  .video_h_w {
+    @apply w-full lg:h-[576px] md:h-[400px] sm:h-full xs:h-full;
+  }
+  .vedio_custom_class {
+    @apply lg:rounded-tl-[73px] lg:rounded-bl-[73px] lg:rounded-br-[73px]  md:rounded-tl-[53px] md:rounded-bl-[53px] md:rounded-br-[53px] sm:rounded-md xs:rounded-md lg:border-[5px] md:border-[5px] sm:border-[3px] xs:border-[3px] border-blueSecondary border-solid;
+  }
+  .main_play_button {
+    @apply lg:size-[118px] md:size-[100px] sm:size-[75px] xs:size-[50px];
+  }
+  .main_play_button svg {
+    @apply lg:h-[44px] lg:w-[39px] md:h-[40px] md:w-[35px] sm:h-[35px] sm:w-[31px] xs:h-[18px] xs:w-[14px];
+  }
+  .label_form {
+    @apply lg:text-[16px] md:text-[14px] sm:text-[10px] xs:text-[10px] text-black font-[500] capitalize;
+  }
+  .input_form {
+    @apply bg-transparent border border-black border-solid lg:input-md md:input-md sm:input-sm xs:input-sm;
+  }
+  .input_form::placeholder {
+    @apply text-[#999] lg:text-[14px] md:text-[12px] sm:text-[12px] xs:text-[12px];
+  }
+  .placeholer_form::placeholder {
+    @apply text-[#999] lg:text-[14px] md:text-[12px] sm:text-[12px] xs:text-[12px];
+  }
+  .form-control .label {
+    @apply lg:block md:block sm:hidden xs:hidden;
   }
 }
