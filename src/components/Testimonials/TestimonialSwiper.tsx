@@ -2,7 +2,6 @@
 
 import { TestimnialsCardI } from "../componetns";
 import TestimonialCard from "./TestimonialCard";
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -12,7 +11,7 @@ import { EffectCoverflow } from "swiper/modules";
 
 type Props = {
   tesimonialsData: TestimnialsCardI[];
-  handleSlideChange: (el: any) => void;
+  handleSlideChange: (el: number) => void;
   activeId?: number;
 };
 

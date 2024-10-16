@@ -15,7 +15,7 @@ const TestimonialSlider = ({ tesimonialsData }: Props) => {
     tesimonialsData[0]
   );
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper: number) => {
     const activeSlide = tesimonialsData[swiper];
     const activeId = activeSlide?.id;
     setActiveId(activeId);
@@ -27,6 +27,7 @@ const TestimonialSlider = ({ tesimonialsData }: Props) => {
       <TestimonialSwiper
         tesimonialsData={tesimonialsData}
         handleSlideChange={handleSlideChange}
+        activeId={activeId}
       />
     </Fragment>
   );

@@ -1,10 +1,7 @@
-import React from "react";
 import Title from "../Title/Title";
 import ConsultationForm from "./ConsultationForm";
 
-type Props = {};
-
-const Consultation = (props: Props) => {
+const Consultation = () => {
   return (
     <div>
       <Title

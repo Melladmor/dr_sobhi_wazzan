@@ -4,10 +4,9 @@ import { TestimnialsCardI } from "../componetns";
 
 type Props = {
   tesimonialsData: TestimnialsCardI;
-  activeId?: number;
 };
 
-const TestimonialCard = ({ tesimonialsData, activeId }: Props) => {
+const TestimonialCard = ({ tesimonialsData }: Props) => {
   return (
     <div className="flex justify-center items-center gap-[10px] flex-col">
       <div>

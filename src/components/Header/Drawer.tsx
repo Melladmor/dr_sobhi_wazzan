@@ -1,11 +1,8 @@
 import React from "react";
-import Navs from "./Navs";
 import { headerData } from "../../../localdata/headerData";
 import NavsDrawer from "./NavsDrawer";
 
-type Props = {};
-
-const Drawer = (props: Props) => {
+const Drawer = () => {
   return (
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />

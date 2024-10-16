@@ -1,5 +1,5 @@
 import { UseVolumeReturn } from "@/hooks/hook";
-import { useState, useRef, MutableRefObject } from "react";
+import { useState, MutableRefObject } from "react";
 
 const useVolume = (
   initialVolume: number = 1,

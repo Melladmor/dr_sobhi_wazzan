@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { VolumeI } from "../player";
 import { UseVolumeReturn } from "@/hooks/hook";
 
 type Props = UseVolumeReturn;
@@ -11,7 +9,6 @@ const Volume = ({
   volume,
   isMuted,
   showVolumeControl,
-  toggleMute,
   toggleVolumeControl,
 }: Props) => {
   return (

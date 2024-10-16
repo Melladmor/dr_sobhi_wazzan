@@ -1,6 +1,5 @@
-import { useRef, useState, useEffect, MutableRefObject } from "react";
+import { useState, useEffect, MutableRefObject } from "react";
 import { UseTrackHookReturn } from "./hook";
-
 
 export default function useTrackHook(
   videoRef: MutableRefObject<HTMLVideoElement | null>

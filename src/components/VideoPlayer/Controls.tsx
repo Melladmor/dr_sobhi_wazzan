@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import PlayPause from "./Controls/PlayPause";
 import { ControlsI } from "./player";
 import FullScreen from "./Controls/FullScreen";

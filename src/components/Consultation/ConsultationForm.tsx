@@ -4,9 +4,7 @@ import { expertiseData } from "../../../localdata/expertiseData";
 import { expertiseI } from "../../../localdata/type";
 import Button from "../Button";
 
-type Props = {};
-
-const ConsultationForm = (props: Props) => {
+const ConsultationForm = () => {
   return (
     <form className="lg:mb-[40px] md:mb-[30px] sm:mb-[15px] xs:mb-[10px]">
       <div className="form-control">
@@ -84,7 +82,11 @@ const ConsultationForm = (props: Props) => {
               Category
             </option>
             {expertiseData?.expertise?.map((el: expertiseI) => {
-              return <option value={el?.title}>{el?.title}</option>;
+              return (
+                <option value={el?.title} key={el?.id}>
+                  {el?.title}
+                </option>
+              );
             })}
           </select>
         </div>
