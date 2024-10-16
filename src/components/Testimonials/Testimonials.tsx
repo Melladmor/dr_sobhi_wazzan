@@ -1,5 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Title from "../Title/Title";
+import TestimonialSlider from "./TestimonialSlider";
+import { testimonialsData } from "../../../localdata/testimonialsData";
+import Clients from "./Clients/Clients";
 
 type Props = {};
 
@@ -7,13 +10,9 @@ const Testimonials = (props: Props) => {
   return (
     <div>
       <Title title="Let's Hear What They Says" />
+      <TestimonialSlider tesimonialsData={testimonialsData?.tesimoials} />
       <div>
-        <div className="lg:block md:block sm:hidden xs:hidden lg:text-[100px] md:text-[80px] text-bluePrimary font-[800] font-mono">
-          “
-        </div>
-        <div className="lg:block md:block sm:hidden xs:hidden lg:text-[100px] md:text-[80px] text-bluePrimary font-[800] font-mono">
-          “
-        </div>
+        <Clients />
       </div>
     </div>
   );

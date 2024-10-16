@@ -41,6 +41,15 @@ const config: Config = {
         button_card_shadow: "0px 4px 4px 0px #C9C9C9",
         consultation_shadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.18)",
       },
+      animation: {
+        "infinite-scroll": "infinite-scroll 40s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [require("daisyui")],

@@ -7,3 +7,10 @@ export interface MoadlI {
   show: boolean;
   handleShowModal?: () => void;
 }
+export interface TestimnialsCardI {
+  id: number;
+  image: string;
+  name: string;
+  role: string;
+  description: string;
+}

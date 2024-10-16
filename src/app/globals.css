@@ -42,6 +42,7 @@
 .form_bg {
   background: rgba(255, 255, 255, 0);
 }
+
 @layer components {
   .custom_padding {
     @apply lg:pr-[6.5rem] lg:pl-[6.5rem] md:pr-[6rem] md:pl-[6rem] sm:pr-[1rem] sm:pl-[1rem] xs:pl-[1rem] xs:pr-[1rem];
@@ -89,4 +90,28 @@
   .form-control .label {
     @apply lg:block md:block sm:hidden xs:hidden;
   }
+  .mask_infitie {
+    @apply lg:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-100px),transparent_100%)] sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_32px,_black_calc(100%-70px),transparent_100%)] xs:[mask-image:_linear-gradient(to_right,transparent_0,_black_16px,_black_calc(100%-50px),transparent_100%)];
+  }
+}
+.swiper_container {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
