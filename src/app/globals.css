@@ -5,10 +5,9 @@
 * {
   scroll-behavior: smooth;
 }
-.custombg {
-  background-color: rgba(23, 161, 255, 0.5);
-  filter: blur(200px);
-  opacity: 50%;
+
+.inner-shadow {
+  box-shadow: inset 0 2px 200px rgba(23, 161, 255, 0.5); /* Inner shadow with specified color */
 }
 .vedioPlayButton {
   background: rgba(113, 113, 113, 0.2);
@@ -54,11 +53,11 @@
     @apply custombg;
   }
   .custom_glass_effect {
-    @apply relative overflow-hidden;
+    @apply relative;
   }
   .custom_glass_effect::before {
     content: "";
-    @apply absolute inset-0 custombg bg-opacity-30 backdrop-blur-[200px] z-0;
+    @apply absolute inset-0 inner-shadow;
   }
   .custom_glass_content {
     @apply relative z-0 p-6;
@@ -70,7 +69,7 @@
     @apply lg:rounded-tl-[73px] lg:rounded-bl-[73px] lg:rounded-br-[73px]  md:rounded-tl-[53px] md:rounded-bl-[53px] md:rounded-br-[53px] sm:rounded-md xs:rounded-md lg:border-[5px] md:border-[5px] sm:border-[3px] xs:border-[3px] border-blueSecondary border-solid;
   }
   .custom_course_image_border {
-    @apply lg:rounded-tl-[48px] lg:rounded-bl-[48px] lg:rounded-br-[48px] md:rounded-tl-[40px] md:rounded-bl-[40px] md:rounded-br-[40px] sm:rounded-tl-[30px] sm:rounded-bl-[30px] sm:rounded-br-[30px] xs:rounded-tl-[20px] xs:rounded-bl-[20px] xs:rounded-br-[20px]
+    @apply lg:rounded-tl-[48px] lg:rounded-bl-[48px] lg:rounded-br-[48px] md:rounded-tl-[40px] md:rounded-bl-[40px] md:rounded-br-[40px] sm:rounded-tl-[30px] sm:rounded-bl-[30px] sm:rounded-br-[30px] xs:rounded-tl-[20px] xs:rounded-bl-[20px] xs:rounded-br-[20px];
   }
   .main_play_button {
     @apply lg:size-[118px] md:size-[100px] sm:size-[75px] xs:size-[50px];

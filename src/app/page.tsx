@@ -18,23 +18,23 @@ export default function Home() {
           <Hero />
         </CustomBox>
       </section>
-      <CustomBox htmlAttr={{ id: "about" }} >
+      <CustomBox htmlAttr={{ id: "about" }} withCustomBg>
         <About />
       </CustomBox>
-      <CustomBox >
+      <CustomBox withCustomBg>
         <Expertise />
       </CustomBox>
-      <CustomBox >
+      <CustomBox withCustomBg>
         <OurMission />
       </CustomBox>
-      <CustomBox  htmlAttr={{ id: "consultation" }}>
+      <CustomBox withCustomBg htmlAttr={{ id: "consultation" }}>
         <Consultation />
       </CustomBox>
-      <CustomBox  htmlAttr={{ id: "testimonials" }}>
+      <CustomBox withCustomBg htmlAttr={{ id: "testimonials" }}>
         <Testimonials />
       </CustomBox>
 
-      <CustomBox  htmlAttr={{ id: "courses" }}>
+      <CustomBox withCustomBg htmlAttr={{ id: "courses" }}>
         <Courses />
       </CustomBox>
     </main>
