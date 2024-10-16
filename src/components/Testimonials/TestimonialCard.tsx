@@ -14,7 +14,7 @@ const TestimonialCard = ({ tesimonialsData }: Props) => {
           src={tesimonialsData?.image}
           width={100}
           height={100}
-          objectFit="contain"
+          objectFit="cover"
           alt={tesimonialsData?.image}
           className={`lg:size-[114px] md:size-[100px] sm:size-[60px] xs:size-[60px] rounded-[50%]`}
           loading="lazy"

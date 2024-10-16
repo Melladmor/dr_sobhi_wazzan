@@ -1,5 +1,6 @@
 import About from "@/components/About/About";
 import Consultation from "@/components/Consultation/Consultation";
+import Courses from "@/components/Courses/Courses";
 import CustomBox from "@/components/CustomBox";
 import Expertise from "@/components/Expertise/Expertise";
 import Header from "@/components/Header/Header";
@@ -17,20 +18,24 @@ export default function Home() {
           <Hero />
         </CustomBox>
       </section>
-      <CustomBox htmlAttr={{ id: "about" }} withCustomBg>
+      <CustomBox htmlAttr={{ id: "about" }} >
         <About />
       </CustomBox>
-      <CustomBox withCustomBg>
+      <CustomBox >
         <Expertise />
       </CustomBox>
-      <CustomBox withCustomBg>
+      <CustomBox >
         <OurMission />
       </CustomBox>
-      <CustomBox withCustomBg htmlAttr={{ id: "consultation" }}>
+      <CustomBox  htmlAttr={{ id: "consultation" }}>
         <Consultation />
       </CustomBox>
-      <CustomBox withCustomBg htmlAttr={{ id: "testimonials" }}>
+      <CustomBox  htmlAttr={{ id: "testimonials" }}>
         <Testimonials />
+      </CustomBox>
+
+      <CustomBox  htmlAttr={{ id: "courses" }}>
+        <Courses />
       </CustomBox>
     </main>
   );

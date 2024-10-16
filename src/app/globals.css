@@ -69,6 +69,9 @@
   .vedio_custom_class {
     @apply lg:rounded-tl-[73px] lg:rounded-bl-[73px] lg:rounded-br-[73px]  md:rounded-tl-[53px] md:rounded-bl-[53px] md:rounded-br-[53px] sm:rounded-md xs:rounded-md lg:border-[5px] md:border-[5px] sm:border-[3px] xs:border-[3px] border-blueSecondary border-solid;
   }
+  .custom_course_image_border {
+    @apply lg:rounded-tl-[48px] lg:rounded-bl-[48px] lg:rounded-br-[48px] md:rounded-tl-[40px] md:rounded-bl-[40px] md:rounded-br-[40px] sm:rounded-tl-[30px] sm:rounded-bl-[30px] sm:rounded-br-[30px] xs:rounded-tl-[20px] xs:rounded-bl-[20px] xs:rounded-br-[20px]
+  }
   .main_play_button {
     @apply lg:size-[118px] md:size-[100px] sm:size-[75px] xs:size-[50px];
   }
