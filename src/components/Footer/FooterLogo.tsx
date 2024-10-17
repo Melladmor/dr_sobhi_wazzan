@@ -1,8 +1,8 @@
-const Logo = () => {
+const FooterLogo = () => {
   return (
     <div>
       <svg
-        className="lg:size-[48px]   md:size-[40px] sm:size-[35px] xs:size-[30px]"
+        className="lg:size-[98px]   md:size-[77px] sm:size-[66px] xs:size-[56px]"
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -48,4 +48,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default FooterLogo;

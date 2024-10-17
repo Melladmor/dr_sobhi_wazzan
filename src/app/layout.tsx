@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const roboto = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -23,7 +25,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo.png" color="black" sizes="any" />
       </head>
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${roboto.variable} antialiased`}>
+        <Header />
+
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

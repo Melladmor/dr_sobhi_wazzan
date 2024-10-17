@@ -36,7 +36,7 @@ const Button = ({
               viewBox="0 0 26 22"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="lg:size-5 md:size-4 sm:size-2 xs:size-2">
+              className="lg:size-5 md:size-4 sm:size-3 xs:size-3">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
