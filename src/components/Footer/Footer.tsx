@@ -10,7 +10,7 @@ import FooterSocial from "./FooterSocial";
 
 const Footer = () => {
   return (
-    <CustomBox className="bg-blurGradient_normal pt-[108px]">
+    <CustomBox hash="footer" className="bg-blurGradient_normal pt-[108px]">
       <div className="flex flex-col lg:gap-[40px] md:gap-[30px] sm:gap-[20px] xs:gap-[20px]">
         <div>
           <FooterLogo />
@@ -35,7 +35,7 @@ const Footer = () => {
             <p className="lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px] font-[400] sm:mt-2 xs:mt-2 text-white capitalize">
               Follow us on social media to get our latest news and updates
             </p>
-            <div className="flex sm:justify-between xs:justify-between md:justify-start lg:justify-start gap-[16px] sm:mt-2 xs:mt-2">
+            <div className="flex justify-start lg:gap-[16px] md:gap-[14px] sm:gap-[12px] xs:gap-[10px] sm:mt-2 xs:mt-2">
               {footerData?.socialMedia?.map((el: SocialMediaT) => {
                 return <FooterSocial key={el?.id} {...el} />;
               })}

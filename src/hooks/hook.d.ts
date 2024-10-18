@@ -29,4 +29,7 @@ export type useNextBackReturn = {
   handleNext: () => void;
 };
 
-
+export interface UseActiveHashReturn {
+  activeHash: string;
+  updateHash: (hash: string) => void;
+}

@@ -33,7 +33,7 @@ const Select: React.FC<InputSelectProps> = ({
         } select select-bordered w-full  lg:select-md md:select-md sm:select-sm xs:select-sm`}
         id={id}
         {...register}>
-        <option value={placeholder} disabled selected>
+        <option defaultValue={placeholder} disabled selected>
           {placeholder}
         </option>
         {options.map((el) => (

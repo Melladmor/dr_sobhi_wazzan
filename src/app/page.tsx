@@ -6,32 +6,39 @@ import Expertise from "@/components/Expertise/Expertise";
 import Hero from "@/components/Hero/Hero";
 import OurMission from "@/components/OurMission/OurMission";
 import Testimonials from "@/components/Testimonials/Testimonials";
+import useActiveHash from "@/hooks/useActiveHash";
 
 export default function Home() {
   return (
     <main>
       <section className="bg-blurGradient_normal">
-        <CustomBox htmlAttr={{ id: "home" }}>
+        <CustomBox hash="home" htmlAttr={{ id: "home" }}>
           <Hero />
         </CustomBox>
       </section>
-      <CustomBox htmlAttr={{ id: "about" }} withCustomBg>
+      <CustomBox hash="about" htmlAttr={{ id: "about" }} withCustomBg>
         <About />
       </CustomBox>
-      <CustomBox withCustomBg htmlAttr={{ id: "expertise" }}>
+      <CustomBox hash="expertise" withCustomBg htmlAttr={{ id: "expertise" }}>
         <Expertise />
       </CustomBox>
-      <CustomBox withCustomBg>
+      <CustomBox hash="ourmission" withCustomBg>
         <OurMission />
       </CustomBox>
-      <CustomBox withCustomBg htmlAttr={{ id: "consultation" }}>
+      <CustomBox
+        hash="consultation"
+        withCustomBg
+        htmlAttr={{ id: "consultation" }}>
         <Consultation />
       </CustomBox>
-      <CustomBox withCustomBg htmlAttr={{ id: "testimonials" }}>
+      <CustomBox
+        hash="testimonials"
+        withCustomBg
+        htmlAttr={{ id: "testimonials" }}>
         <Testimonials />
       </CustomBox>
 
-      <CustomBox withCustomBg htmlAttr={{ id: "courses" }}>
+      <CustomBox hash="courses" withCustomBg htmlAttr={{ id: "courses" }}>
         <Courses />
       </CustomBox>
     </main>

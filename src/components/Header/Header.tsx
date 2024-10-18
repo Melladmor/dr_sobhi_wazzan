@@ -18,7 +18,9 @@ function Header() {
         <Navs data={headerData} />
       </div>
       <div className="navbar-end">
-        <Button color="bluePrimary lg:h-[2.5rem]" withArrow>
+        <Button
+          color="bluePrimary lg:h-[2.5rem] md:h-[2rem] sm:h-[1.5rem] xs:h-[1.5rem] w-auto"
+          withArrow>
           Join To Platform Now
         </Button>
       </div>
