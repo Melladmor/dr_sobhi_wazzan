@@ -6,7 +6,6 @@ import Expertise from "@/components/Expertise/Expertise";
 import Hero from "@/components/Hero/Hero";
 import OurMission from "@/components/OurMission/OurMission";
 import Testimonials from "@/components/Testimonials/Testimonials";
-import useActiveHash from "@/hooks/useActiveHash";
 
 export default function Home() {
   return (

@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import { HeaderDataI } from "../../../localdata/type";
 import Link from "next/link";
 import useActiveHash from "@/hooks/useActiveHash";

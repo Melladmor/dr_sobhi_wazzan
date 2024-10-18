@@ -1,10 +1,7 @@
-import { useEffect, useState, RefObject } from "react";
+import { useEffect, useState } from "react";
 import { UseActiveHashReturn } from "./hook";
 
-const useActiveHash = (
-  initialHash: string,
-  ref?: RefObject<HTMLElement>
-): UseActiveHashReturn => {
+const useActiveHash = (initialHash: string): UseActiveHashReturn => {
   const [activeHash, setActiveHash] = useState<string>(initialHash);
 
   const updateHash = (hash: string) => {
