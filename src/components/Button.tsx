@@ -6,6 +6,7 @@ type Props = {
   onClick?: () => void;
   withArrow?: boolean;
   customClass?: string;
+  type?: "button" | "submit";
 };
 
 const Button = ({
@@ -15,10 +16,11 @@ const Button = ({
   onClick,
   withArrow,
   customClass,
+  type,
 }: Props) => {
   return (
     <button
-      type="button"
+      type={type ? type : "button"}
       className={`btn btn-sm ${customClass} ${bg ? `bg-${bg}` : "bg-white"} ${
         color ? `text-${color}` : "text-black"
       }    lg:text-[1rem] md:text-[1rem] sm:text-[0.75rem] xs:text-[0.7rem] text-nowrap rounded-[30px] shadow-custom px-[1.5rem] lg:h-[3rem] md:h-[3rem] sm:h-[2.5rem] xs:h-[2.5rem]  font-[500] `}

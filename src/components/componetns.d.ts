@@ -14,3 +14,11 @@ export interface TestimnialsCardI {
   role: string;
   description: string;
 }
+export interface ConsultaionDataI {
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+  category: string;
+  description: string;
+}

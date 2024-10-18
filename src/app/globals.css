@@ -81,7 +81,23 @@
     @apply lg:text-[16px] md:text-[14px] sm:text-[10px] xs:text-[10px] text-black font-[500] capitalize;
   }
   .input_form {
-    @apply bg-transparent border border-black border-solid lg:input-md md:input-md sm:input-sm xs:input-sm;
+    @apply bg-transparent border border-black outline-none border-solid lg:input-md md:input-md sm:input-sm xs:input-sm;
+  }
+  .input_form_error {
+    @apply bg-transparent border border-red-500 border-solid lg:input-md md:input-md sm:input-sm xs:input-sm;
+  }
+  .input_form_error:focus {
+    @apply border-red-500 outline-red-600;
+  }
+
+  .textarea_from {
+    @apply bg-transparent border border-black border-solid;
+  }
+  .textarea_error_from {
+    @apply bg-transparent border border-red-500 border-solid;
+  }
+  .textarea_error_from:focus {
+    @apply border-red-500 outline-red-600;
   }
   .input_form::placeholder {
     @apply text-[#999] lg:text-[14px] md:text-[12px] sm:text-[12px] xs:text-[12px];
