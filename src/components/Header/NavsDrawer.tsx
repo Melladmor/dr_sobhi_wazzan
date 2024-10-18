@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { HeaderDataI } from "../../../localdata/type";
 import Link from "next/link";
+import useActiveHash from "@/hooks/useActiveHash";
 type Props = {
   data: HeaderDataI[];
 };
 const NavsDrawer = ({ data }: Props) => {
-  const [activeHash, setActiveHash] = useState<string>("home");
+  const { activeHash, updateHash } = useActiveHash("home");
+
   const closeDrawer = () => {
     const drawerCheckbox = document.getElementById(
       "my-drawer"
@@ -49,7 +51,7 @@ const NavsDrawer = ({ data }: Props) => {
                   key={el?.id}
                   href={`#${el?.id}`}
                   onClick={() => {
-                    setActiveHash(el?.id);
+                    updateHash(el?.id);
                     closeDrawer();
                   }}>
                   {el?.title}
