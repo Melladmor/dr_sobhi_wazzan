@@ -32,7 +32,7 @@ const Hero = () => {
           {heroSectionData?.subTitle}
         </p>
         <div className="flex items-center  lg:flex-row md:flex-col  sm:flex-col xs:flex-col lg:gap-[24px] md:gap-[24px] sm:gap-[20px] xs:gap-[18px] xs:pb-4">
-          <Button customClass="lg:flex md:block lg:items-center md:items-center sm:block xs:block  lg:w-auto md:w-[310px] sx:w-[200px] xs:w-[200px] lg:h-[3.5rem] md:h-[3rem] sm:h-[2.5rem] xs:h-[2.5rem]  text-center">
+          <Button customClass="lg:flex md:block lg:items-center md:items-center sm:block xs:block  lg:w-auto md:w-[310px] sx:w-[222px] xs:w-[222px] lg:h-[3.5rem] md:h-[3rem] sm:h-[2.5rem] xs:h-[2.5rem]  text-center">
             Book your consultation now
           </Button>
           <HeroVideo

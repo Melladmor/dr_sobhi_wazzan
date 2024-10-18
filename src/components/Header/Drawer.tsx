@@ -12,7 +12,7 @@ const Drawer = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            className="inline-block  size-[1.5rem] stroke-current text-white mb-1">
+            className="inline-block  size-[2.2rem] stroke-current text-white mb-1">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
