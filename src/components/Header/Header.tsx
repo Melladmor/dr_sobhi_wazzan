@@ -19,7 +19,7 @@ function Header() {
       </div>
       <div className="navbar-end">
         <Button
-          color="bluePrimary lg:h-[2.5rem] lg:h-[3rem] md:h-[2rem] sm:h-[1.5rem] xs:h-[1rem] w-auto"
+          color="bluePrimary lg:h-[2.7rem]  md:h-[2rem] sm:h-[1.5rem] xs:h-[1rem] w-auto"
           withArrow>
           Join To Platform Now
         </Button>
