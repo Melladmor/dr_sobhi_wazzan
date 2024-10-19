@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "../Title/Title";
 import ExpertiseCard from "./ExpertiseCard";
 import { expertiseData } from "../../../localdata/expertiseData";

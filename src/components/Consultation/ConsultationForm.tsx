@@ -71,6 +71,21 @@ const ConsultationForm = () => {
             placeholder="First Name"
             error={errors.firstname}
             register={register("firstname")}
+            motionProps={{
+              initial: {
+                y: -150,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 0.75,
+              },
+            }}
           />
           <Input
             id="lastname"
@@ -78,6 +93,21 @@ const ConsultationForm = () => {
             placeholder="Last Name"
             error={errors.lastname}
             register={register("lastname")}
+            motionProps={{
+              initial: {
+                y: -175,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 1,
+              },
+            }}
           />
         </div>
         <div className="flex items-center lg:gap-[20px] md:gap-[15px] sm:gap-[10px] xs:gap-[10px] lg:flex-nowrap md:flex-wrap sm:flex-wrap xs:flex-wrap lg:mb-[30px] md:mb-[20px] sm:mb-[10px] xs:mb-[10px]">
@@ -87,6 +117,21 @@ const ConsultationForm = () => {
             placeholder="Email"
             error={errors.email}
             register={register("email")}
+            motionProps={{
+              initial: {
+                y: -200,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 1.25,
+              },
+            }}
           />
           <Input
             id="phone"
@@ -94,6 +139,21 @@ const ConsultationForm = () => {
             placeholder="Phone"
             error={errors.phone}
             register={register("phone")}
+            motionProps={{
+              initial: {
+                y: -225,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 1.5,
+              },
+            }}
           />
         </div>
         <div className="lg:mb-[30px] md:mb-[20px] sm:mb-[10px] xs:mb-[10px] w-full">
@@ -104,6 +164,21 @@ const ConsultationForm = () => {
             placeholder="Category"
             register={register("category")}
             error={errors.category}
+            motionProps={{
+              initial: {
+                y: -250,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 1.75,
+              },
+            }}
           />
         </div>
         <div className="w-full lg:mb-[30px] md:mb-[20px] sm:mb-[12px] xs:mb-[10px]">
@@ -113,11 +188,41 @@ const ConsultationForm = () => {
             placeholder="Description of the consultation..."
             register={register("description")}
             error={errors.description}
+            motionProps={{
+              initial: {
+                y: -275,
+                opacity: 0,
+                scale: 0.5,
+              },
+              whileInView: {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+              },
+              transition: {
+                duration: 2,
+              },
+            }}
           />
         </div>
       </div>
       <div>
         <Button
+          motionProps={{
+            initial: {
+              y: 200,
+              opacity: 0,
+              scale: 0.5,
+            },
+            whileInView: {
+              y: 0,
+              opacity: 1,
+              scale: 1,
+            },
+            transition: {
+              duration: 1.75,
+            },
+          }}
           customClass="w-full text-white border-none rounded-lg bg-bluePrimary"
           bg="bluePrimary"
           type="submit">

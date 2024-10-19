@@ -9,7 +9,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <section className="bg-blurGradient_normal">
         <CustomBox hash="home" htmlAttr={{ id: "home" }}>
           <Hero />

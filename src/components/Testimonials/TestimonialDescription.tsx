@@ -1,5 +1,5 @@
-import React from "react";
-
+"use client";
+import { motion } from "framer-motion";
 type Props = {
   description?: string;
 };
@@ -10,9 +10,22 @@ const TestimonialDescription = ({ description }: Props) => {
       <div className="lg:block md:block sm:hidden xs:hidden lg:text-[100px] md:text-[80px] text-bluePrimary font-[800] font-mono">
         “
       </div>
-      <h5 className="text-[16px] text-bluePrimary font-[400] max-w-[800px] fadeIn text-center">
+      <motion.h5
+        key={description}
+        initial={{
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        className="text-[16px] text-bluePrimary font-[400] max-w-[800px] fadeIn text-center">
         {description}
-      </h5>
+      </motion.h5>
       <div className="lg:block md:block sm:hidden xs:hidden lg:text-[100px] md:text-[80px] text-bluePrimary font-[800] font-mono">
         “
       </div>

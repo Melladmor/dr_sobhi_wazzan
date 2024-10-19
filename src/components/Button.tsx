@@ -1,4 +1,7 @@
 "use client";
+
+import { MotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 type Props = {
   bg?: string;
   color?: string;
@@ -7,6 +10,7 @@ type Props = {
   withArrow?: boolean;
   customClass?: string;
   type?: "button" | "submit";
+  motionProps?: MotionProps;
 };
 
 const Button = ({
@@ -17,9 +21,11 @@ const Button = ({
   withArrow,
   customClass,
   type,
+  motionProps,
 }: Props) => {
   return (
-    <button
+    <motion.button
+      {...motionProps}
       type={type ? type : "button"}
       className={`btn btn-sm ${customClass} ${bg ? `bg-${bg}` : "bg-white"} ${
         color ? `text-${color}` : "text-black"
@@ -50,7 +56,7 @@ const Button = ({
           ""
         )}
       </div>
-    </button>
+    </motion.button>
   );
 };
 

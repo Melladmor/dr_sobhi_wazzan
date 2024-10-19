@@ -4,7 +4,7 @@ import usePlayHook from "@/hooks/usePlayHook";
 import Controls from "./Controls";
 import useVolume from "@/hooks/useVolume";
 import useNextBack from "@/hooks/useNextBack";
-
+import { motion } from "framer-motion";
 type Props = {
   videoLink: string;
   customClass?: string;
@@ -33,7 +33,19 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
 
   const { handleBack, handleNext } = useNextBack(videoRef);
   return (
-    <div className="relative video_h_w">
+    <motion.div
+      initial={{
+        opacity: 0,
+        scale: 1.5,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      className="relative video_h_w">
       <video
         ref={videoRef}
         className={`video_h_w  object-cover ${
@@ -70,7 +82,7 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
           handleNext,
         }}
       />
-    </div>
+    </motion.div>
   );
 };
 

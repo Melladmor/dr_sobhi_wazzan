@@ -1,13 +1,25 @@
-import React from "react";
+"use client";
 import { expertiseI } from "../../../localdata/type";
 import Image from "next/image";
 import Button from "../Button";
-
+import { motion } from "framer-motion";
 type Props = expertiseI;
 
-const ExpertiseCard = ({ title, description, image }: Props) => {
+const ExpertiseCard = ({ id, title, description, image }: Props) => {
   return (
-    <div className="py-[2.5rem] px-[1.5rem] bg-white  shadow-custom_shaow_card rounded-[12px] lg:w-[18.5rem] md:w-full sm:w-full xs:w-full ">
+    <motion.div
+      initial={{
+        opacity: 0,
+        scale: 0.5,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        duration: id === 1 ? id : id - 0.5,
+      }}
+      className="py-[2.5rem] px-[1.5rem] bg-white  shadow-custom_shaow_card rounded-[12px] lg:w-[18.5rem] md:w-full sm:w-full xs:w-full ">
       <div className="lg:mb-[24px] md:mb-[24px] sm:mb-[20px] xs:mb-[18px]">
         <Image
           src={image}
@@ -32,7 +44,7 @@ const ExpertiseCard = ({ title, description, image }: Props) => {
           Book your consultation now
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,8 @@
+"use client";
+import { MotionProps } from "framer-motion";
 import React from "react";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
-
+import { motion } from "framer-motion";
 type options = {
   id: number;
   title: string;
@@ -12,6 +14,7 @@ interface InputSelectProps {
   register: UseFormRegisterReturn;
   placeholder: string;
   error?: FieldError;
+  motionProps?: MotionProps;
 }
 
 const Select: React.FC<InputSelectProps> = ({
@@ -21,9 +24,10 @@ const Select: React.FC<InputSelectProps> = ({
   register,
   error,
   placeholder,
+  motionProps,
 }) => {
   return (
-    <div className="w-full">
+    <motion.div {...motionProps} className="w-full">
       <label className="label label_form" htmlFor={id}>
         <span className="label-text">{label}</span>
       </label>
@@ -43,7 +47,7 @@ const Select: React.FC<InputSelectProps> = ({
         ))}
       </select>
       <span className="text-red-500 text-[12px] mt-2">{error?.message}</span>
-    </div>
+    </motion.div>
   );
 };
 
