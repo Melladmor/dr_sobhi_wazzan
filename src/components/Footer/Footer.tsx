@@ -11,7 +11,7 @@ import FooterSocial from "./FooterSocial";
 const Footer = () => {
   return (
     <CustomBox hash="footer" className="bg-blurGradient_normal pt-[108px]">
-      <div className="flex flex-col lg:gap-[40px] md:gap-[30px] sm:gap-[20px] xs:gap-[20px]">
+      <footer className="flex flex-col lg:gap-[40px] md:gap-[30px] sm:gap-[20px] xs:gap-[20px]">
         <div>
           <FooterLogo />
         </div>
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </CustomBox>
   );
 };

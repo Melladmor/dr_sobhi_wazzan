@@ -23,11 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/logo.png" color="black" sizes="any" />
+        <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
       </head>
       <body className={`${roboto.variable} antialiased`}>
         <Header />
-
         {children}
         <Footer />
       </body>
