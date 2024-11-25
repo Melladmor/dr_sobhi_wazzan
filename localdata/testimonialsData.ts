@@ -9,7 +9,7 @@ export const testimonialsData: TestimonialsI = {
       role: "Founder of Varibo",
       image: "/images/testimonials/1.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. 1",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam.",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export const testimonialsData: TestimonialsI = {
       role: "Founder of Varibo",
       image: "/images/testimonials/2.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. 2",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam.",
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ export const testimonialsData: TestimonialsI = {
       role: "Founder of Varibo",
       image: "/images/testimonials/3.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. 3",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam.",
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ export const testimonialsData: TestimonialsI = {
       role: "Founder of Varibo",
       image: "/images/testimonials/4.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. 4",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam.",
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ export const testimonialsData: TestimonialsI = {
       role: "Founder of Varibo",
       image: "/images/testimonials/5.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. 5",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt fames quisque mauris at diam.",
     },
   ],
   clients: [
