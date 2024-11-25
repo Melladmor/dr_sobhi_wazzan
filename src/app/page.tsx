@@ -24,12 +24,8 @@ export default function Home() {
       <CustomBox hash="ourmission" withCustomBg>
         <OurMission />
       </CustomBox>
-      <CustomBox
-        hash="consultation"
-        withCustomBg
-        htmlAttr={{ id: "consultation" }}>
-        <Consultation />
-      </CustomBox>
+
+      <Consultation />
       <CustomBox
         hash="testimonials"
         withCustomBg

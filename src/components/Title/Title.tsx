@@ -6,7 +6,7 @@ type Props = TitleI;
 const Title = ({ title, description }: Props) => {
   return (
     <div className="w-full text-center lg:mb-[3.75rem] md:mb-[3rem] sm:mb-[2.5rem] xs:mb-[2rem]">
-      <h2 className="lg:text-[2.5rem] md:[2.5rem] sm:[2rem] xs:[2rem] text-bluePrimary font-[800] mb-[12px]">
+      <h2 className="capitalize lg:text-[2.5rem] md:[2.5rem] sm:[2rem] xs:[2rem] text-bluePrimary font-[800] mb-[12px]">
         {title}
       </h2>
       {description ? (

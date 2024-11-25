@@ -1,23 +1,26 @@
+import Button from "../Button";
 import Title from "../Title/Title";
 import ConsultationForm from "./ConsultationForm";
 
 const Consultation = () => {
   return (
-    <div>
-      <Title
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt  fames quisque mauris at diam."
-        title="Request a consultation"
-      />
-      <div className="w-full rounded-[10px] shadow-consultation_shadow lg:px-[70px] md:px-[40px] sm:px-[40px] xs:px-[20px] py-[20px] bg-white">
-        <div className="lg:mb-[35px] md:mb-[30px] sm:mb-[25px] xs:mb-[20px]">
-          <h3 className="text-[#0D0D0D] lg:text-[23px] md:text-[21px] sm:text-[19px] xs:text-[17px] font-[500] lg:mb-[10px] md:mb-[10px] sm:mb-[8px] xs:mb-[8px]">
-            Discover our solutions
-          </h3>
-          <p className="text-gray_2 text-[14px] font-[275]">
-            We will get back to you as soon as we can
+    <div
+      id="consultation"
+      className="bg-blurGradient_normal custom_padding py-4">
+      <div className="h-[60vh] text-white flex justify-center items-center flex-col text-center gap-[40px]">
+        <div>
+          <h2 className="capitalize lg:text-[2.5rem] md:[2.5rem] sm:[2rem] xs:[2rem] text-white font-[800] mb-[20px]">
+            Get expert advice tailored to your needs
+          </h2>
+          <p className="text-gray_1 lg:text-[2rem] md:text-[2rem] sm:text-[1rem] xs:text-[1rem] font-[500]">
+            Book your consultation with Dr. Wazzan
           </p>
         </div>
-        <ConsultationForm />
+        <Button
+          withArrow
+          customClass="rounded-lg hover:scale-105 hover:shadow-xl hover:shadow-blue-500">
+          Book Your Consultation.
+        </Button>
       </div>
     </div>
   );
