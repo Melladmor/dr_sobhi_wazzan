@@ -1,6 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Button from "../Button";
 
 const Consultation = () => {
+  const router = useRouter();
   return (
     <div
       id="consultation"
@@ -16,7 +19,8 @@ const Consultation = () => {
         </div>
         <Button
           withArrow
-          customClass="rounded-lg hover:scale-105 hover:shadow-xl hover:shadow-blue-500">
+          customClass="rounded-lg hover:scale-105 hover:shadow-xl hover:shadow-blue-500"
+          onClick={() => router.replace("/consultaion")}>
           Book Your Consultation.
         </Button>
       </div>

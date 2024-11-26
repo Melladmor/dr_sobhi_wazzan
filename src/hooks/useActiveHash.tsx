@@ -3,7 +3,6 @@ import { UseActiveHashReturn } from "./hook";
 
 const useActiveHash = (initialHash: string): UseActiveHashReturn => {
   const [activeHash, setActiveHash] = useState<string>(initialHash);
-
   const updateHash = (hash: string) => {
     setActiveHash(hash);
   };

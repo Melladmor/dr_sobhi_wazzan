@@ -1,7 +1,7 @@
 "use client";
 import { HeaderDataI } from "../../../localdata/type";
-import Link from "next/link";
 import useActiveHash from "@/hooks/useActiveHash";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
   data: HeaderDataI[];
@@ -9,21 +9,35 @@ type Props = {
 
 const Navs = ({ data }: Props) => {
   const { activeHash, updateHash } = useActiveHash("home");
+  const path = usePathname();
+  const router = useRouter();
 
+  const handleNavigation = (id: string) => {
+    if (path === "/consultaion") {
+      router.push(`/#${id}`);
+      updateHash(id);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+        updateHash(id);
+      }
+    }
+  };
   return (
     <>
       {data?.map((el: HeaderDataI) => (
-        <Link
-          className={`${
+        <div
+          className={`cursor-pointer ${
             activeHash === el?.id
               ? "text-blueSecondary text-bold underline"
               : "text-white"
           }`}
           key={el?.id}
-          href={`#${el?.id}`}
-          onClick={() => updateHash(el?.id)}>
+          // href={`#${el?.id}`}
+          onClick={() => handleNavigation(el?.id)}>
           {el?.title}
-        </Link>
+        </div>
       ))}
     </>
   );

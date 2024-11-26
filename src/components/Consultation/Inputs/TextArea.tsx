@@ -3,7 +3,7 @@ import React from "react";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import { motion } from "framer-motion";
 interface InputTextareaProps {
-  label: string;
+  label?: string;
   id: string;
   placeholder: string;
   register: UseFormRegisterReturn;
@@ -21,9 +21,11 @@ const TextArea: React.FC<InputTextareaProps> = ({
 }) => {
   return (
     <motion.div {...motionProps} className="w-full">
-      <label className="label label_form" htmlFor={id}>
-        <span className="label-text">{label}</span>
-      </label>
+      {label && (
+        <label className="label label_form" htmlFor={id}>
+          <span className="label-text">{label}</span>
+        </label>
+      )}
       <textarea
         placeholder={placeholder}
         rows={5}

@@ -8,7 +8,7 @@ type options = {
   title: string;
 };
 interface InputSelectProps {
-  label: string;
+  label?: string;
   id: string;
   options: options[];
   register: UseFormRegisterReturn;
@@ -28,9 +28,11 @@ const Select: React.FC<InputSelectProps> = ({
 }) => {
   return (
     <motion.div {...motionProps} className="w-full">
-      <label className="label label_form" htmlFor={id}>
-        <span className="label-text">{label}</span>
-      </label>
+      {label && (
+        <label className="label label_form" htmlFor={id}>
+          <span className="label-text">{label}</span>
+        </label>
+      )}
       <select
         className={`${
           error ? "input_form_error" : "input_form"

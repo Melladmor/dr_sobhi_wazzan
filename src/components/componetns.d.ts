@@ -21,4 +21,5 @@ export interface ConsultaionDataI {
   phone: string;
   category: string;
   description: string;
+  duration: string;
 }
