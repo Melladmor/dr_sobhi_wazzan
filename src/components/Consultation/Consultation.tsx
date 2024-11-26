@@ -1,6 +1,4 @@
 import Button from "../Button";
-import Title from "../Title/Title";
-import ConsultationForm from "./ConsultationForm";
 
 const Consultation = () => {
   return (
