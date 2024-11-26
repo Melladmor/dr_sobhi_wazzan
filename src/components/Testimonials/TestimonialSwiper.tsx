@@ -7,34 +7,36 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectCoverflow } from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 import style from "./swiper.module.css";
-import useMediaScreen from "@/hooks/useMediaScreen";
 type Props = {
   tesimonialsData: TestimnialsCardI[];
 };
 
 const TestimonialSwiper = ({ tesimonialsData }: Props) => {
-  const isSmallScreen = useMediaScreen(768);
-
   return (
     <Swiper
       effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
+      slidesPerView={"auto"}
       loop={true}
-      slidesPerView={isSmallScreen ? 1 : 2}
       coverflowEffect={{
-        rotate: 0,
-        stretch: 50,
-        depth: 200,
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
         modifier: 1,
+        slideShadows: true,
       }}
-      modules={[EffectCoverflow]}
-      className={isSmallScreen ? style.mySwiper2 : style.mySwiper1}>
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      modules={[EffectCoverflow, Autoplay]}
+      className={style.mySwiper1}>
       {tesimonialsData?.map((el: TestimnialsCardI) => {
         return (
-          <SwiperSlide key={el?.id}>
+          <SwiperSlide className={style.mySwiper2} key={el?.id}>
             <TestimonialCard tesimonialsData={el} />
           </SwiperSlide>
         );

@@ -18,17 +18,17 @@ const TestimonialCard = ({ tesimonialsData }: Props) => {
         className="lg:size-[114px] md:size-[100px] sm:size-[70px] xs:size-[70px] lg:border-[5px] md:border-[4px] sm:border-[3px] xs:border-[3px] p-1 border-solid border-bluePrimary rounded-[50%] absolute top-[-30%] translate-y-[18%] left-[50%] translate-x-[-50%]"
         loading="lazy"
       />
-      <div className="lg:min-h-[200px] md:min-h-[170px] sm:min-h-[140px] xs:min-h-[140px] flex flex-col justify-end ">
-        <div className="text-center mb-3">
-          <p className="lg:text-[18px] md:text-[16px] sm:text-[12px] xs:text-[12px] font-[400] text-gray_1">
+      <div className="lg:min-h-[200px] md:min-h-[170px] sm:min-h-[150px] xs:min-h-[150px] flex flex-col lg:justify-end md:justify-end sm:justify-center xs:justify-center">
+        <div className="text-center lg:mb-3 md:mb-3 sm:mb-2 xs:mb-2">
+          <p className="lg:text-[18px] md:text-[16px] sm:text-[12px] xs:text-[10px] font-[400] text-gray_1">
             {tesimonialsData?.role}
           </p>
-          <h4 className="lg:text-[24px] md:text-[22px] sm:text-[16px] xs:text-[14px] font-[700] text-bluePrimary">
+          <h4 className="lg:text-[24px] md:text-[22px] sm:text-[16px] xs:text-[12px] font-[700] text-bluePrimary">
             {tesimonialsData?.name}
           </h4>
         </div>
         <div>
-          <h5 className="lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px] text-[#2E3E5C] font-[400] max-w-[800px] fadeIn text-center">
+          <h5 className="lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[10px] text-[#2E3E5C] font-[400] max-w-[800px] fadeIn text-center">
             {tesimonialsData?.description}
           </h5>
         </div>
