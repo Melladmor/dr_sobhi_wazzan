@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "../Button";
 
-type Props = {};
-
-const FooterBanner = (props: Props) => {
+const FooterBanner = () => {
   return (
     <div className="lg:h-[200px] md:h-[200px] sm:h-[150px] xs:h-[150px] w-[85%] bg-blueGradient_dark absolute lg:top-[-25%] md:top-[-25%] sm:top-[-13%] xs:top-[-13%] translate-y-[18%] left-[50%] translate-x-[-50%] rounded-[20px] lg:px-[62px] md:px-[50px] sm:px-[35px] xs:px-[25px] flex  items-center">
       <div className="flex justify-between items-center lg:flex-row md:flex-row sm:flex-col xs:flex-col gap-[15px]">
