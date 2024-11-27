@@ -34,7 +34,6 @@ const Navs = ({ data }: Props) => {
               : "text-white"
           }`}
           key={el?.id}
-          // href={`#${el?.id}`}
           onClick={() => handleNavigation(el?.id)}>
           {el?.title}
         </div>

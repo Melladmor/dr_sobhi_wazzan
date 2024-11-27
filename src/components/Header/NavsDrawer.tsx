@@ -1,37 +1,12 @@
 "use client";
 import { HeaderDataI } from "../../../localdata/type";
-import Link from "next/link";
 import useActiveHash from "@/hooks/useActiveHash";
-import { motion } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 type Props = {
   data: HeaderDataI[];
 };
 
 const NavsDrawer = ({ data }: Props) => {
-  const variantsUl = {
-    open: {
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    },
-    closed: {
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
-  };
-  const variantsLi = {
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 },
-      },
-    },
-    closed: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 },
-      },
-    },
-  };
   const { activeHash, updateHash } = useActiveHash("home");
 
   const closeDrawer = () => {
@@ -42,12 +17,25 @@ const NavsDrawer = ({ data }: Props) => {
       drawerCheckbox.checked = false; // Uncheck the checkbox to close the drawer
     }
   };
+
+  const path = usePathname();
+  const router = useRouter();
+  const handleNavigation = (id: string) => {
+    if (path === "/consultaion") {
+      router.push(`/#${id}`);
+      updateHash(id);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+        updateHash(id);
+      }
+    }
+  };
   return (
     <>
       <input id="my-drawer" type="checkbox" className="drawer-toggle hidden" />
-      <motion.ul
-        variants={variantsUl}
-        className=" bg-blurGradient_normal  min-h-full w-80 p-4">
+      <ul className=" bg-blurGradient_normal  min-h-full w-80 p-4">
         <label
           htmlFor="my-drawer"
           aria-label="close sidebar"
@@ -68,29 +56,26 @@ const NavsDrawer = ({ data }: Props) => {
         {data?.map((el: HeaderDataI) => {
           return (
             <label key={el?.id}>
-              <motion.li
-                variants={variantsLi}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+              <li
                 className={`${
                   activeHash === el?.id
                     ? "text-blueSecondary bg-white rounded-md"
                     : "text-white"
                 } p-2`}>
-                <Link
+                <div
+                  className="cursor-pointer"
                   key={el?.id}
-                  href={`#${el?.id}`}
                   onClick={() => {
-                    updateHash(el?.id);
+                    handleNavigation(el?.id);
                     closeDrawer();
                   }}>
                   {el?.title}
-                </Link>
-              </motion.li>
+                </div>
+              </li>
             </label>
           );
         })}
-      </motion.ul>
+      </ul>
     </>
   );
 };

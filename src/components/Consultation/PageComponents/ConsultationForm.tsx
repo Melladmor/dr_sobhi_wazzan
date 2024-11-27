@@ -68,7 +68,7 @@ const ConsultationForm = () => {
       className="lg:mb-[40px] md:mb-[30px] sm:mb-[15px] xs:mb-[10px]"
       onSubmit={handleSubmit(onSubmit)}>
       <div className="form-control">
-        <div className="mb-[4rem]">
+        <div className="lg:mb-[4rem] md:mb-[4rem] sm:mb-[2rem] xs:mb-[2rem]">
           <ConsultationTiltes title="Consultation Duration" />
           <Radio
             id="duration"
@@ -132,7 +132,7 @@ const ConsultationForm = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="px-2">
         <Button
           customClass="w-full text-white border-none rounded-lg bg-bluePrimary"
           bg="bluePrimary"
