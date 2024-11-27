@@ -7,10 +7,14 @@ import Button from "../Button";
 import { footerData } from "../../../localdata/footerData";
 import { SocialMediaT } from "../../../localdata/type";
 import FooterSocial from "./FooterSocial";
+import FooterBanner from "./FooterBanner";
 
 const Footer = () => {
   return (
-    <CustomBox hash="footer" className="bg-blurGradient_normal pt-[108px]">
+    <CustomBox
+      hash="footer"
+      className="bg-blurGradient_normal pt-[108px]  relative">
+      <FooterBanner />
       <footer className="flex flex-col lg:gap-[40px] md:gap-[30px] sm:gap-[20px] xs:gap-[20px]">
         <div>
           <FooterLogo />

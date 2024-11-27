@@ -33,7 +33,11 @@ export default function Home() {
         <Testimonials />
       </CustomBox>
 
-      <CustomBox hash="courses" withCustomBg htmlAttr={{ id: "courses" }}>
+      <CustomBox
+        className="pb-[240px]"
+        hash="courses"
+        withCustomBg
+        htmlAttr={{ id: "courses" }}>
         <Courses />
       </CustomBox>
     </main>

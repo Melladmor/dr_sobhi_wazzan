@@ -29,7 +29,7 @@ const Radio = ({
             <div
               className={`${
                 error ? "radio_error" : "radio_normal"
-              } flex items-center justify-between lg:px-2 md:px-2 sm:px-1 xs:px-1  lg:py-3 md:py-3 sm:py-2 xs:py-2 rounded-md`}>
+              } flex items-center justify-between lg:px-2 md:px-2 sm:px-2 xs:px-2  lg:py-3 md:py-3 sm:py-2 xs:py-2 rounded-md`}>
               <div className="flex items-center space-x-4">
                 <input
                   type="radio"
